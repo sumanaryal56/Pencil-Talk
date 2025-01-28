@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Signup Form </title>
+    <link rel ="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    
+    <button class="back" id="back"> Back </button>
+
+    <div class= "form-container">
+        
+        <form>
+            <h1> Want a community of enthusiasts?  Join Now &#128512; </h1>
+            <img class="logo" src =  "../images/logo.png">
+            <br>
+            <label for="username" class="username-label"> Username </label>
+            <br> 
+            <input type="text" name="username" id="username" placeholder="Enter your username" required>
+            <br> 
+            <label class="pencil-password" for="password"> Password </label>
+            <br>
+            <input type ="password" name ='password' id="password" placeholder="Enter your password" required>
+            <br>
+    
+            <button id="pencil-signup" class="pencil-signup" > SignUp </button>
+            <p> Already a member ?    <button class="pencil-login" id="pencil-login"> Login </button> </p>
+           
+          
+        </form>
+        
+    </div>
+    <script> 
+        document.addEventListener("DOMContentLoaded", function() {
+            const signup_button  = document.getElementById('pencil-signup');
+            const login_button = document.getElementById("pencil-login");
+            const back_button = document.getElementById("back");
+
+        signup_button.addEventListener("click", function(event) {
+            event.preventDefault();
+        
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if(username && password) {
+            alert("Login in with the Saved Information");
+            window.location.href = "login.html";
+
+        }
+    else{
+        alert("Username and Password required");
+    }})
+    login_button.addEventListener("click", function() {
+        window.location.href = "login.html";
+    });
+    back_button.addEventListener("click", function() {
+        if(window.history.length > 1) {
+            window.history.back();
+        }
+        else{
+            window.location.href = "index.html";
+        }
+    })
+})
+    </script>
+    
+</body>
+</html>

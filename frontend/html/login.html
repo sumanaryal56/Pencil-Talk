@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login to Pencil Talk</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    
+    <div class= "form-container">
+        
+    <form>
+        <h1> Login Now to Pencil Talk !</h1>
+        <img class="logo" src =  "../images/logo.png">
+        <br>
+        <label for="username" class="username-label"> Username </label>
+        <br> 
+        <input type="text" name="username" id="username" placeholder="Enter your username" required>
+        <br> 
+        <label class="pencil-password" for="password"> Password </label>
+        <br>
+        <input type ="password" name ='password' id="password" placeholder="Enter your password" required>
+        <br>
+
+        <button class="pencil-login", id="pencil-login"> Login </button>
+    </form>
+    <button class="back" id="back"> Back </button>
+</div>
+<script> 
+    document.addEventListener("DOMContentLoaded", function() {
+        const login_button = document.getElementById("pencil-login");
+        const back_button = document.getElementById("back");
+        
+
+   
+    back_button.addEventListener("click", function() {
+        window.location.href='index.html';
+    })
+
+    login_button.addEventListener("click", function(event) {
+        event.preventDefault();
+        const username  = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+    usernames = ["Suman", "Iresh", "Chandan", "Hasini"];
+    passwords= ["12345","1235","6678","8876"];
+    if(usernames.includes(username) && passwords.includes(password)) {
+        window.location.href = "add-link.html";
+
+    }
+    else{
+        alert("Either Username or password is incorrect");
+    }
+})
+})
+
+</script>
+
+    
+</body>
+</html>
