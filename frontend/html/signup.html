@@ -43,6 +43,11 @@
 
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
+
+            //save the username and password 
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            
             if(username && password) {
             alert("Login in with the Saved Information");
             window.location.href = "login.html";

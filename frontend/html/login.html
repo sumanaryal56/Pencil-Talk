@@ -39,11 +39,12 @@
 
     login_button.addEventListener("click", function(event) {
         event.preventDefault();
-        const username  = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-    usernames = ["Suman", "Iresh", "Chandan", "Hasini"];
-    passwords= ["12345","1235","6678","8876"];
-    if(usernames.includes(username) && passwords.includes(password)) {
+        const usernamei  = document.getElementById("username").value;
+        const passwordi = document.getElementById("password").value;
+   const stored_username = localStorage.getItem('username');
+   const stored_password = localStorage.getItem('password');
+
+   if(usernamei == stored_username && passwordi == stored_password) {
         window.location.href = "add-link.html";
 
     }
